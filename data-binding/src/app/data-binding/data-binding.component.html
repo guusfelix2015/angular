@@ -14,7 +14,8 @@
     <img [src]="ulrImage" />
     <img src="{{ ulrImage }}" />
   </article> -->
-  <article>
+
+  <!-- <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe
@@ -60,5 +61,38 @@
         Esse texto so aparece em caso de erro
       </div>
     </div>
-  </article>
+  </article> -->
+
+  <section class="event-binding">
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="botaoClicado()" type="button" class="btn btn-primary">
+        Me clique
+      </button>
+
+      <br />
+      <br />
+
+      <input
+        (blur)="salvarValor(campoInput.value)"
+        (keyUp.enter)="salvarValor(campoInput.value)"
+        (keyup)="OnKeyUp($event)"
+        type="text"
+        #campoInput
+      />
+
+      <p>Valor atual: {{ valorAtual }}</p>
+      <p>Valor salvo: {{ valorSalvo }}</p>
+
+      <br />
+      <br />
+
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+        >passe o mouse sobre mim</span
+      >
+    </div>
+  </section>
 </section>
