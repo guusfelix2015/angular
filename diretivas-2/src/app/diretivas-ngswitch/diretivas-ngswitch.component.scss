@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  background: rgb(36, 33, 33);
+  padding: 20px;
+
+  a {
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+}

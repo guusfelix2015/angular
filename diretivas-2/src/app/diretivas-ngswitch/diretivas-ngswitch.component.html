@@ -1,0 +1,11 @@
+<nav class="nav">
+  <a [class.active]="aba == 'home'" (click)="aba = 'home'">Home</a>
+  <a [class.active]="aba == 'mapa'" (click)="aba = 'mapa'">Mapa</a>
+  <a [class.active]="aba == 'lista'" (click)="aba = 'lista'">Lista</a>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchCase="'mapa'">Mapa</p>
+  <p *ngSwitchCase="'lista'">Lista</p>
+  <p *ngSwitchDefault>Home</p>
+</div>
