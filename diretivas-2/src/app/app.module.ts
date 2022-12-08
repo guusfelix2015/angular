@@ -13,6 +13,7 @@ import { OperadorElvisComponent } from './operador-elvis/operador-elvis.componen
 import { NgContentComponent } from './ng-content/ng-content.component';
 import { FundoAmareloDirective } from './directives/fundo-amarelo.directive';
 import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretivas-customizadas.component';
+import { HighlightMouseDirective } from './directives/highlight-mouse.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DiretivasCustomizadasComponent } from './diretivas-customizadas/diretiv
     NgContentComponent,
     FundoAmareloDirective,
     DiretivasCustomizadasComponent,
+    HighlightMouseDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
