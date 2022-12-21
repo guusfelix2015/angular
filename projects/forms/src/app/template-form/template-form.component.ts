@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-form.component.scss'],
 })
 export class TemplateFormComponent implements OnInit {
+  usuario: any = {
+    nome: 'Gustavo',
+    email: 'gusfelix@gmail.com',
+  };
+
   onSubmit(form: any) {
     console.log(form);
+    console.log(this.usuario);
   }
   constructor() {}
 
