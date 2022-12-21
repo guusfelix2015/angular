@@ -1,30 +1,36 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)">
-  <div class="form-group mb-3">
-    <label for="nome" class="form-label">Nome</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nome"
-      name="nome"
-      placeholder="Nome"
-      [ngModel]="usuario.nome"
-      required
-      #nome
-    />
-    <div>{{ nome.className }}</div>
-  </div>
-  <div class="form-group mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input
-      type="email"
-      class="form-control"
-      id="email"
-      name="email"
-      placeholder="nome@email.com"
-      [ngModel]="usuario.email"
-      required
-      email
-    />
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="teste">
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="form-group mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        placeholder="Nome"
+        [ngModel]="usuario.nome"
+        required
+        #nome="ngModel"
+      />
+      <!--   <div>{{ nome.className }}</div> -->
+
+      <div class="alert alert-danger mt-3" *ngIf="!nome.valid && nome.touched">
+        Nome é obrigatório
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="nome@email.com"
+        [ngModel]="usuario.email"
+        required
+        email
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
