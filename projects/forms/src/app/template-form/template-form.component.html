@@ -12,8 +12,6 @@
         required
         #nome="ngModel"
       />
-      <!--   <div>{{ nome.className }}</div> -->
-
       <div class="alert alert-danger mt-3" *ngIf="!nome.valid && nome.touched">
         Nome é obrigatório
       </div>
@@ -31,6 +29,10 @@
         email
       />
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!f.valid">
+      Submit
+    </button>
+    <app-form-debug [form]="f"></app-form-debug>
   </form>
 </div>
