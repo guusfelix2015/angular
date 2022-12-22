@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DataFormComponent } from './data-form.component';
+import { TemplateFormModule } from '../template-form/template-form.module';
 
 @NgModule({
   declarations: [DataFormComponent],
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TemplateFormModule],
 })
 export class DataFormModule {}
